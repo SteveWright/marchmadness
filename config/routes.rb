@@ -1,4 +1,12 @@
 Shoplist::Application.routes.draw do
+  match '/help',   to: 'home_pages#help'
+
+  match '/about', to: 'home_pages#about'
+
+  match '/contact', to: 'home_pages#contact'
+
+  match '/home', to: 'home_pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +56,7 @@ Shoplist::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home_pages#home'
 
   # See how all your routes lay out with "rake routes"
 
